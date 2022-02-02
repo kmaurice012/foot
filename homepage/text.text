@@ -1,0 +1,41 @@
+
+const testing = async () => {
+
+
+  const apiClient = axios.create({
+    baseURL: "http://api.football-data.org/v2",
+    credentials: true,
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      "X-Auth-Token": "a869fc31948d475d8d05f85052ee535b",
+    },
+  });
+
+  apiClient
+    .get("/matches")
+    .then((response) => {
+      sessionStorage.setItem("matches", JSON.stringify(response.data));
+      console.log(response.data);
+    })
+    .catch((error) => {
+      text.innerHTML = error;
+    });
+  apiClient.get("/competitions/2002/standings").then((response) => {
+    sessionStorage.setItem("bundes", JSON.stringify(response.data));
+    console.log(response.data);
+  });
+  apiClient.get("/competitions/2021/standings").then((response) => {
+    sessionStorage.setItem("premier", JSON.stringify(response.data));
+    console.log(response.data);
+  });
+  apiClient.get("/competitions/2019/standings").then((response) => {
+    sessionStorage.setItem("seria", JSON.stringify(response.data));
+    console.log(response.data);
+  });
+
+  
+
+
+ 
+};

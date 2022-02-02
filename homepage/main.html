@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Aclonica"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.js"></script> -->
+    <script src="stupid.js"></script>
+    <link rel="stylesheet" href="stupid.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!-- axios link -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" defer></script>
+    <!-- axios link -->
+  </head>
+  <body onload="testing()">
+    <div class="h1">
+      <div class="h1_animation">
+        <h1 class="ml16">Football 24/7</h1>
+      </div>
+      <div style="padding-left: 87%;">
+      <!-- <button class="button" id="btn" onclick="profile()">Profile</button> -->
+      <div class="dropdown">
+        <button class="dropbtn" style="width: 250px;">Profile</button>
+        <div class="dropdown-content" style="text-align: center; border-radius: 0px 0px 10px 10px;">
+          <img src="images/brilli1.png" alt="image not found">
+          <p><b>Username:</b><i>admin</i></p>
+          <p><b>Email:</b><i>admin@gmail.com</i></p>
+          <div style="position: relative; margin-bottom: 1.4em;">
+            <a onclick="profile()">Click to change password </a>
+          </div>
+         
+        </div>
+      </div>
+    
+      <script src="profile.js"></script>
+    </div>
+    </div>
+
+    <div class="slidercontainer">
+      <div class="showSlide fade">
+        <img src="images/image1.jpg" />
+        <div class="content">
+          <h2 class="ml5">
+            <span class="text-wrapper">
+              <span class="line line1"></span>
+              <span class="letters letters-left">Tottenham </span>
+
+              <span class="letters letters-right">Hotspur</span>
+              <span class="line line2"></span>
+            </span>
+          </h2>
+          <p>
+            Tottenham Hotspur Football Club, commonly referred to as Tottenham
+            Spurs, is an English professional football club based in Tottenham,
+            London, that competes in the Premier League, the top flight of
+            English football.
+          </p>
+        </div>
+      </div>
+      <div class="showSlide fade">
+        <img src="images/image2.jpg" />
+        <div class="content">
+          <h2>Chelsea FC</h2>
+          <p>
+            Chelsea Football Club is an English professional football club
+            Founded in 1905.It is based in Fulham,West-London.
+          </p>
+        </div>
+      </div>
+
+      <div class="showSlide fade">
+        <img src="images/image3.jpg" />
+        <div class="content">
+          <h2>Real Madrid</h2>
+          <p>
+            Real Madrid, is a Spanish professional football club based in
+            Madrid. Founded on 6 March 1902 as Madrid Football Club, the club
+            has traditionally worn a white home kit since inception.
+          </p>
+        </div>
+      </div>
+      <div class="showSlide fade">
+        <img src="images/image4.jpg" />
+        <div class="content">
+          <h2>Liverpool FC</h2>
+          <p>
+            Liverpool Football Club is a professional football club in
+            Liverpool, England, that competes in the Premier League, the top
+            tier of English football. Domestically, the club has won nineteen
+            League titles, seven FA Cups, a record eight League Cups and fifteen
+            FA Community Shields.
+          </p>
+        </div>
+      </div>
+      <!-- Navigation arrows -->
+      <a class="left" onclick="nextSlide(-1)">❮</a>
+      <a class="right" onclick="nextSlide(1)">❯</a>
+    </div>
+    <!-- courasel -->
+
+    <!-- courasel Javascript-->
+    <script src="main.js"></script>
+    <!-- courasel Javascript-->
+    <br />
+
+    <h3><span>Top league`s Starts</span> </h3>
+
+    <!-- <div class="parallax"></div> -->
+    <br />
+
+    <!-- cards -->
+
+    <ul class="cards" style="background-color: white;">
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); premier()"
+          class="card"
+          id="premierLeague"
+          name="Premier League"
+        >
+          <img src="images/moh.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img class="card__thumb" src="images/premier-league.svg" alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title">Premier league</h3>
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Contested by 20 clubs, it operates on a system of promotion and
+              relegation with the English Football League (EFL). Seasons run
+              from August to May with each team playing 38 matches.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); bundes()"
+          class="card"
+          id="bundesliga"
+          name="Bundesliga"
+        >
+          <img src="images/lewa.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img class="card__thumb" src="images/bundesliga.svg" alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title">Bundesliga</h3>
+                <span class="card__status">3 hours ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              The Bundesliga comprises 18 teams and operates on a system of
+              promotion and relegation with the 2. Bundesliga. Seasons run from
+              August to May.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); champions()"
+          class="card"
+          id="uefa"
+          name="Champions League"
+        >
+          <img src="images/chris.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="images/uefa-champions-league-1.svg"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">UEFA</h3>
+                <!-- <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>             -->
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              UEFA represents the national football associations of Europe, runs
+              nation and club competitions including the UEFA European
+              Championship, UEFA Nations League, UEFA Champions League, UEFA
+              Europa League, UEFA Europa Conference League, and UEFA Super Cup,
+              and controls the prize money, regulations, and media rights to
+              those competitions.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); laliga()"
+          class="card"
+          id="laliga"
+          name="Laliga"
+        >
+          <img src="images/messi.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img class="card__thumb" src="images/laliga-1.svg" alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title">Laliga</h3>
+                <span class="card__status">3 hours ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Since its inception, a total of 62 teams have competed in La Liga.
+              Nine teams have been crowned champions, with Real Madrid winning
+              the title a record 34 times.
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <!-- cards -->
+    <br /><br />
+    <!-- accordions -->
+
+    <!--Start Premier legue Accordion  -->
+    <div class="league-table" style="display: none" id="container">
+      <h2 id="name_to_display">Accordion</h2>
+      <!-- I used the id name to display to change the h2 element using javascript when I click the card -->
+
+      <button class="accordion">STANDINGS</button>
+      <div class="panel">
+        <div
+          id="myGrid"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+      <button class="accordion">Todays Fixtures</button>
+      <div class="panel">
+        <div
+          id="myGrida"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+     
+    </div>
+    <!--End of Premier legue Accordion  -->
+
+    <!-- Start of Bundesliga Accordion  -->
+    <div class="league-table" style="display: none" id="container1">
+      <h2 id="name_to_display1">Bundesliga</h2>
+      <!-- I used the id name to display to change the h2 element using javascript when I click the card -->
+
+      <button class="accordion1">Bundesliga STANDINGS</button>
+      <div class="panel">
+        <div
+          id="myGrid1"
+          style="min-height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+      <button class="accordion1">Today`s Fixture`s</button>
+      <div class="panel">
+        <div
+          id="myGridb"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+    </div>
+
+    <!-- End of bundesliga Accordion  -->
+
+    <!-- Start of Champions legue Accordion  -->
+
+    <div class="league-table2" style="display: none" id="container2">
+      <h2 id="name_to_display2">Accordion</h2>
+      <!-- I used the id name to display to change the h2 element using javascript when I click the card -->
+
+      <button class="accordion2">UEFA STANDINGS</button>
+      <div class="panel2">
+        <div
+          id="myGrid2"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+      <button class="accordion2">Section 2</button>
+      <div class="panel">
+        <div
+          id="myGridc"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+    </div>
+
+    <!-- End of  Champions league Accordion  -->
+
+    <!--Start of Laliga Accordion  -->
+
+    <div class="league-table" style="display: none" id="container3">
+      <h2 id="name_to_display3">Accordion</h2>
+      <!-- I used the id name to display to change the h2 element using javascript when I click the card -->
+
+      <button class="accordion3">Laliga STANDINGS</button>
+      <div class="panel">
+        <div
+          id="myGrid3"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+      <button class="accordion3">Section 2</button>
+      <div class="panel">
+        <div
+          id="myGridd"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+    </div>
+    <!--End of Laliga Accordion  -->
+
+    <!-- <button onclick= "makeGetRequest()">jffkjvmcjhvcjghxcf</button> -->
+    <!-- Todays fixtures -->
+    <!-- <button class="butt"  onclick="event.preventDefault(); butt()"> Todays Fixtures</button> -->
+    <!-- Todays fixtures -->
+    <div class="parallax"></div>
+    <h3><span>Top league`s Starts</span></h3>
+
+    <ul class="cards">
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); ligue1()"
+          class="card"
+          id="league1"
+          name="league1"
+        >
+          <img src="images/mbappe.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img class="card__thumb" src="images/ligue1.png" alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title">League1</h3>
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Serie A, also called Serie A TIM for sponsorship reasons, is a
+              professional league competition for football clubs located at the
+              top of the Italian football league system and the winner is
+              awarded the Scudetto and the Coppa Campioni d'Italia.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); seriaA()"
+          class="card"
+          id="seria"
+          name="seria"
+        >
+          <img src="images/zlattan.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img class="card__thumb" src="images/Seria_A.svg" alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title"></h3>
+                <span class="card__status">3 hours ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Serie A, also called Serie A TIM for sponsorship reasons, is a
+              professional league competition for football clubs located at the
+              top of the Italian football league system and the winner is
+              awarded the Scudetto and the Coppa Campioni d'Italia.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); champions()"
+          class="card"
+          id="uefa"
+          name="Champions League"
+        >
+          <img src="images/chris.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img
+                class="card__thumb"
+                src="images/uefa-champions-league-1.svg"
+                alt=""
+              />
+              <div class="card__header-text">
+                <h3 class="card__title">UEFA</h3>
+                <!-- <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>             -->
+                <span class="card__status">1 hour ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              UEFA represents the national football associations of Europe, runs
+              nation and club competitions including the UEFA European
+              Championship, UEFA Nations League, UEFA Champions League, UEFA
+              Europa League, UEFA Europa Conference League, and UEFA Super Cup,
+              and controls the prize money, regulations, and media rights to
+              those competitions.
+            </p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href=""
+          onclick="event.preventDefault(); laliga()"
+          class="card"
+          id="laliga"
+          name="Laliga"
+        >
+          <img src="images/messi.jpg" class="card__image" alt="" />
+          <div class="card__overlay">
+            <div class="card__header">
+              <svg class="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img class="card__thumb" src="images/laliga-1.svg" alt="" />
+              <div class="card__header-text">
+                <h3 class="card__title">Laliga</h3>
+                <span class="card__status">3 hours ago</span>
+              </div>
+            </div>
+            <p class="card__description">
+              Since its inception, a total of 62 teams have competed in La Liga.
+              Nine teams have been crowned champions, with Real Madrid winning
+              the title a record 34 times.
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <br />
+    <!-- START OF LEAGUE 1 ACCORDION -->
+
+    <div class="league-table" style="display: none" id="container4">
+      <h2 id="name_to_display4">Accordion</h2>
+      <!-- I used the id name to display to change the h2 element using javascript when I click the card -->
+
+      <button class="accordion4">Laliga STANDINGS</button>
+      <div class="panel">
+        <div
+          id="myGrid4"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+      <button class="accordion4">Section 2</button>
+      <div class="panel">
+        <div
+          id="myGride"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+    </div>
+    <!-- END OF LEAGUE 1 ACCORDION -->
+
+    <!-- START OF SERIA A ACCORDION -->
+
+    <div class="league-table" style="display: none" id="container5">
+      <h2 id="name_to_display5">Accordion</h2>
+      <!-- I used the id name to display to change the h2 element using javascript when I click the card -->
+
+      <button class="accordion5">Seria A Starts</button>
+      <div class="panel">
+        <div
+          id="myGrid5"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+      <button class="accordion5">Section 2</button>
+      <div class="panel">
+        <div
+          id="myGridf"
+          style="height: 500px; width: 100%"
+          class="ag-theme-alpine"
+        ></div>
+      </div>
+
+    </div>
+    <h3><span>Top league`s Teams</span> </h3>
+<div style="display: flex;">
+    <div class="containerr">
+      <img class="img" src="images/city.png" alt="">
+      <img class="img" src="images/chelsea.png" alt="">
+      <img class="img" src="images/pool.png" alt="">
+    </div>
+    <div class="containerr" style="padding-left: 25px;">
+      <img class="img" src="images/bayern.png" alt="">
+      <img class="img" src="images/burru.png" alt="">
+      <img class="img" src="images/leva.png" alt="">
+    </div>
+    <div class="containerr" style="padding-left: 25px;">
+      <img class="img" src="images/city.png" alt="">
+      <img class="img" src="images/chelsea.png" alt="">
+      <img class="img" src="images/pool.png" alt="">
+    </div>
+    <div class="containerr" style="padding-left:25px;">
+      <img class="img" src="images/juve.png" alt="">
+      <img class="img" src="images/int.png" alt="">
+      <img class="img" src="images/napoli.png" alt="">
+    </div>
+
+  </div>
+    <script>
+
+      ///butto hover effect
+
+//       document.getElementById("btn").addEventListener("mouseover", fun);  
+// function fun() {  
+//   swal("Are you sure you want to do this?", {
+//   buttons: ["Oh noez!", true],
+// });
+// }  
+      // fixtures butt
+      // function butt(){
+      //   let butt = document.getElementsByClassName("butt");
+
+      //   for (let i = 0; i < butt.length; i++) {
+      //     butt[i].addEventListener("click", function () {
+      //       this.classList.toggle("active");
+      //       var panelb = this.nextElementSibling;
+      //       if (panelb.style.display === "block") {
+      //         panelb.style.display = "none";
+      //       } else {
+      //         panelb.style.display = "block";
+      //       }
+      //     });
+      //   }
+      // }
+
+      // premier legue
+      let acc = document.getElementsByClassName("accordion");
+
+      for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      //  bUdesliga
+      let acc2 = document.getElementsByClassName("accordion1");
+
+      for (let i = 0; i < acc2.length; i++) {
+        acc2[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      //  uefa
+      var acc3 = document.getElementsByClassName("accordion2");
+
+      for (let i = 0; i < acc3.length; i++) {
+        acc3[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      //laliga
+      var acc4 = document.getElementsByClassName("accordion3");
+
+      for (let i = 0; i < acc.length; i++) {
+        acc4[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      //Ligue 1
+
+      var acc4 = document.getElementsByClassName("accordion4");
+
+      for (let i = 0; i < acc.length; i++) {
+        acc4[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      //Seria A
+      //laliga
+      var acc4 = document.getElementsByClassName("accordion5");
+
+      for (let i = 0; i < acc.length; i++) {
+        acc4[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      // bhhsui
+      // Wrap every letter in a span
+      var textWrapper = document.querySelector(".ml16");
+      textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>"
+      );
+
+      anime
+        .timeline({ loop: true })
+        .add({
+          targets: ".ml16 .letter",
+          translateY: [-100, 0],
+          easing: "easeOutExpo",
+          duration: 1400,
+          delay: (el, i) => 30 * i,
+        })
+        .add({
+          targets: ".ml16",
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000,
+        });
+
+      //////////2342fvdsfvdfvdf
+      anime
+        .timeline({ loop: true })
+        .add({
+          targets: ".ml5 .line",
+          opacity: [0.5, 1],
+          scaleX: [0, 1],
+          easing: "easeInOutExpo",
+          duration: 700,
+        })
+        .add({
+          targets: ".ml5 .line",
+          duration: 600,
+          easing: "easeOutExpo",
+          translateY: (el, i) => -0.625 + 0.625 * 2 * i + "em",
+        })
+        .add({
+          targets: ".ml5 .ampersand",
+          opacity: [0, 1],
+          scaleY: [0.5, 1],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: "-=600",
+        })
+        .add({
+          targets: ".ml5 .letters-left",
+          opacity: [0, 1],
+          translateX: ["0.5em", 0],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: "-=300",
+        })
+        .add({
+          targets: ".ml5 .letters-right",
+          opacity: [0, 1],
+          translateX: ["-0.5em", 0],
+          easing: "easeOutExpo",
+          duration: 600,
+          offset: "-=600",
+        })
+        .add({
+          targets: ".ml5",
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          delay: 1000,
+        });
+    </script>
+    <!-- accordions -->
+  </body>
+</html>

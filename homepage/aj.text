@@ -1,0 +1,53 @@
+    headers: { "X-Auth-Token": "ed3452e9e5be441bbbd928111abce961" },
+    
+    url: `http://api.football-data.org/v2/competitions/2002/standings`,
+
+    dataType: "json",
+    type: "GET",
+  }).done(function (response) {
+    // do something with the response, e.g. isolate the id of a linked resource
+    sessionStorage.setItem("bundes", JSON.stringify(response));
+    console.log(response);
+  });
+
+
+  $.ajax({
+    headers: { "X-Auth-Token": "ed3452e9e5be441bbbd928111abce961" },
+    // url: `http://api.football-data.org/v2/competitions/2021/standings`,
+    url: `http://api.football-data.org/v2/competitions`,
+
+    dataType: "json",
+    type: "GET",
+  }).done(function (response) {
+    // do something with the response, e.g. isolate the id of a linked resource
+    sessionStorage.setItem("champions", JSON.stringify(response));
+    console.log(response, "Champions");
+  });
+
+  // Matches
+  $.ajax({
+    headers: { "X-Auth-Token": "ed3452e9e5be441bbbd928111abce961" },
+    // url: `http://api.football-data.org/v2/competitions/2021/standings`,
+    url: `http://api.football-data.org/v2/matches`,
+
+    dataType: "json",
+    type: "GET",
+  }).done(function (response) {
+    // do something with the response, e.g. isolate the id of a linked resource
+    sessionStorage.setItem("matches", JSON.stringify(response));
+    console.log(response, "matches");
+  });
+
+  
+  $.ajax({
+    headers: { "X-Auth-Token": "ed3452e9e5be441bbbd928111abce961" },
+    url: `http://api.football-data.org/v2/competitions/2019/standings`,
+
+    dataType: "json",
+    type: "GET",
+  }).done(function (response) {
+    // do something with the response, e.g. isolate the id of a linked resource
+    sessionStorage.setItem("seria", JSON.stringify(response));
+    console.log(response);
+  });
+
